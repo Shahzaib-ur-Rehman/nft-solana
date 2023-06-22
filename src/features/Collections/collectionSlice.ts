@@ -63,7 +63,7 @@ const collectionSlice = createSlice({
       fetchListedNftsByCollectionSymbol.fulfilled,
       (state, action: PayloadAction<CollectionsResults[]>) => {
         state.loading = false
-        state.results = [...new Set([...state.results, ...action.payload])]
+        state.results =[...state.results, ...action.payload]
         state.error = ''
       }
     )
